@@ -1,6 +1,43 @@
 body {
     font-size: 16px;
     line-height: 1.5;
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 header {
@@ -9,22 +46,79 @@ header {
     &.navbar-default {
         background: transparent;
         border: none;
+
+        nav {
+            a.navbar-brand {
+                height: 100%;
+                padding: 15px 0;
+            }
+
+            .navbar-nav > li {
+                position: static !important;
+
+                &:first-child {
+                    padding-left: 55px;
+                }
+
+                &:hover {
+                    .sub-menu {
+                        display: block;
+                    }
+                }
+
+                & > a {
+                    opacity: 0.8;
+                    color: #ffffff;
+                    line-height: 73px;
+                    padding: 3px 15px 0;
+                    border-bottom: 3px solid transparent;
+
+                    &:hover {
+                        border-bottom-color: #ffffff;
+                        opacity: 1;
+                        color: #ffffff;
+                    }
+                }
+
+                .sub-menu {
+                    display: none;
+                    position: absolute;
+                    padding: 20px 20%;
+                    left: 0;
+                    list-style: none;
+                    width: 100%;
+                    background-color: rgba(17, 33, 72, 0.8);
+                    max-height: 400px;
+
+                    ul {
+                        column-count: 4;
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+                            &.all-category {
+                                a {
+                                    font-weight: bold;
+                                    opacity: 1;
+                                }
+                            }
+
+                            a {
+                                line-height: 2;
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-weight: 200;
+                                opacity: .8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-nav {
-    a.navbar-brand {
-        height: 100%;
-        padding: 15px 0;
-    }
 
-    .navbar-nav>li>a {
-        opacity: 0.8;
-        color: #ffffff;
-        line-height: 70px;
-        padding: 0 10px;
-    }
-}
 
 .slider {
     width: 100%;
