@@ -90,6 +90,9 @@ header.navbar-default nav .navbar-nav > li .sub-menu ul li a {
   font-weight: 200;
   opacity: .8;
 }
+header.navbar-default nav .navbar-nav > li .sub-menu ul li a:hover {
+  opacity: 1;
+}
 .slider {
   width: 100%;
   height: 600px;
