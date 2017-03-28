@@ -123,10 +123,44 @@ header {
 }
 
 
+.carousel {
+    .carousel-indicators {
+        li {
+            height: 4px;
+            width: 50px;
+            border-radius: 0;
+            border: 1px solid transparent;
+            background-color: #ffffff;
+            opacity: .5;
+            margin: 0;
+            margin-right: 7px;
+            overflow-x: hidden;
+            transition: 1s;
 
-.slider {
-    width: 100%;
-    height: 600px;
-    background-image: url(img/banner.jpg);
-    background-size: cover;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    .carousel-inner {
+        .item {
+            img {
+                width: 100%;
+            }
+        }
+
+        .carousel-caption {
+            top: 30%;
+            left: 55px;
+            bottom: inherit;
+            text-align: left;
+            text-shadow: 0 2px 40px rgba(0, 0, 0, 0.7);
+
+            .slider-content {
+                .sub-title {
+                    font-weight: 200;
+                }
+            }
+        }
+    }
 }
