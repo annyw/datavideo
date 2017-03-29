@@ -297,11 +297,28 @@ header {
         margin-top: 20px;
         box-shadow: inset -20px 0 40px 0 rgba(0, 0, 0, 0.3);
         height: 90%;
-        background: url("img/latest-news-bg.png");
+        background: url("img/latest-news-bg.png") no-repeat 50% 50%;
+        background-size: cover;
+        font-size: 0;
+        text-align: center;
+
+        &:before{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height: 100%;
+        }
 
         .latest-news-title {
+            vertical-align: middle;
+            display: inline-block;
+
             h3 {
+                text-align: center;
+                font-size: 40px;
                 margin: 0;
+                color: #ffffff;
             }
         }
     }
@@ -321,7 +338,7 @@ header {
             text-align: center;
             position: absolute;
             bottom: -18px;
-            left: calc(~"50% - 94px");
+            left: calc(~"50% - 52px");
         }
     }
 }
@@ -494,38 +511,7 @@ footer {
     }
 }
 
-
-@media (max-width: 768px) {
-    footer {
-        .social-link,
-        .copyright {
-            text-align: center;
-        }
-    }
-
-    h1 {
-        font-size: 32px;
-        font-weight: 400;
-    }
-
-    h2 {
-        font-size: 32px;
-        font-weight: 100;
-    }
-
-    h3,
-    h4,
-    h5 {
-        font-size: 24px;
-    }
-
-    .carousel {
-        .slider-content {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-    }
-
+@media (max-width: 991px) {
     .custom-news {
         .horizontal-card {
             .card-news {
@@ -538,9 +524,48 @@ footer {
         }
     }
 
+    .latest-news {
+        .lead-img {
+            margin: 0 20px;
+            height: 100px;
+            box-shadow: inset 0  -10px 40px 0 rgba(0, 0, 0, 0.3);
+        }
 
-    .latest-news .news-list {
-        margin-left: 0;
+        .news-list {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .social-link,
+        .copyright {
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: 32px !important;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 32px !important;
+        font-weight: 100;
+    }
+
+    h3,
+    h4,
+    h5 {
+        font-size: 24px !important;
+    }
+
+    .carousel {
+        .slider-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -550,6 +575,14 @@ footer {
             display: block;
             margin: 0 auto;
             margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .latest-news {
+        a {
+            display: block;
         }
     }
 }
