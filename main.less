@@ -610,7 +610,9 @@ footer {
                     .sub-menu {
                         position: relative;
                         background-color: transparent;
-                        padding: 0 0 30px 15px;
+                        padding: 0 0 0 15px;
+                        border-left: 4px solid rgba(255, 255, 255, 0.3);
+                        margin: 0 0 15px 15px;
                     }
 
                     a,
@@ -649,20 +651,8 @@ footer {
 
         .navbar-collapse.collapse {
             display: none !important;
-
-            .has-sub:after {
-                position: absolute;
-                top: 0;
-                right: 0;
-                font-size: 11px;
-                content: "\e64b";
-                //font-family: 'themify';
-                speak: none;
-                font-style: normal;
-                font-weight: normal;
-                font-variant: normal;
-                text-transform: none;
-            }
+            max-height: 455px;
+            overflow-y: auto !important;
         }
 
         .collapse.in {

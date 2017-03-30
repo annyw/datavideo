@@ -445,7 +445,9 @@ footer .social-link ul li:hover {
   header.navbar-default nav .navbar-nav > li .sub-menu {
     position: relative;
     background-color: transparent;
-    padding: 0 0 30px 15px;
+    padding: 0 0 0 15px;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+    margin: 0 0 15px 15px;
   }
   header.navbar-default nav .navbar-nav > li a,
   header.navbar-default nav .navbar-nav > li a:hover {
@@ -474,18 +476,8 @@ footer .social-link ul li:hover {
   }
   header .navbar-collapse.collapse {
     display: none !important;
-  }
-  header .navbar-collapse.collapse .has-sub:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 11px;
-    content: "\e64b";
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
+    max-height: 455px;
+    overflow-y: auto !important;
   }
   header .collapse.in {
     display: block !important;
