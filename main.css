@@ -102,9 +102,6 @@ header.navbar-default nav .navbar-nav:first-child {
 header.navbar-default nav .navbar-nav > li {
   position: static !important;
 }
-header.navbar-default nav .navbar-nav > li:hover .sub-menu {
-  display: block;
-}
 header.navbar-default nav .navbar-nav > li > a {
   opacity: 0.8;
   color: #ffffff;
@@ -412,6 +409,12 @@ footer .social-link ul li:hover {
   .horizontal-card .card-news .card-text .card-title .card-sub-title {
     color: rgba(41, 41, 41, 0.4);
   }
+  header.navbar-default nav .navbar-nav > li:hover .sub-menu {
+    display: block;
+  }
+  header.navbar-default nav .navbar-nav > li span {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand {
@@ -438,6 +441,18 @@ footer .social-link ul li:hover {
   }
   header.navbar-default {
     background: rgba(27, 48, 99, 0.9);
+  }
+  header.navbar-default nav .navbar-nav > li .sub-menu {
+    position: relative;
+    background-color: transparent;
+    padding: 0 0 30px 15px;
+  }
+  header.navbar-default nav .navbar-nav > li a,
+  header.navbar-default nav .navbar-nav > li a:hover {
+    border-bottom: none;
+  }
+  header.navbar-default nav .navbar-nav > li span {
+    display: inline;
   }
   header.navbar-default .navbar-toggle {
     display: block;
@@ -528,9 +543,15 @@ footer .social-link ul li:hover {
   .latest-news a {
     display: block;
   }
+  header.navbar-default nav .navbar-nav > li .sub-menu ul {
+    column-count: 2;
+  }
 }
 @media (max-width: 368px) {
   footer .newsletter .btn-default {
     margin-top: -36px;
   }
+}
+.open {
+  display: block !important;
 }

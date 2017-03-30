@@ -31,7 +31,7 @@
         <nav class="collapse navbar-collapse collapse-overflow" id="collapse">
                 <ul class="nav navbar-nav navbar-left">
                     <li class="has-sub">
-                        <a href="#">产品</a>
+                        <a href="#">产品 <span class="ti-angle-down ti-angle-up"></span> </a>
                         <div class="sub-menu">
                             <ul>
                                 <li class="all-category">
@@ -94,7 +94,7 @@
                     <li><a href="#">解决方案</a></li>
                     <li><a href="#">购买渠道</a></li>
                     <li class="has-sub">
-                        <a href="#">服务与下载</a>
+                        <a href="#">服务与下载 <span class="ti-angle-down ti-angle-up"></span> </a>
                         <div class="sub-menu">
                             <ul>
                                 <li>
@@ -111,7 +111,7 @@
                     </li>
                     <li><a href="#">新闻动态</a></li>
                     <li class="has-sub">
-                        <a href="#">活动竞赛</a>
+                        <a href="#">活动竞赛 <span class="ti-angle-down ti-angle-up"></span> </a>
                         <div class="sub-menu">
                             <ul>
                                 <li>
@@ -536,11 +536,24 @@
 
 <script>
     $(document).ready(function() {
-        $(window).scroll(function() {
+
+        $(window).scroll(function () {
             var scrollDown = $(document).scrollTop();
-            if ( scrollDown > $('.navbar').height() ) $('.navbar').addClass('scroll-down-nav');
+            if (scrollDown > $('.navbar').height()) $('.navbar').addClass('scroll-down-nav');
             else $('.navbar').removeClass('scroll-down-nav');
         });
+
+        if (window.screen.width < 992) {
+            $('.has-sub').click(function () {
+                if($('.sub-menu', this).hasClass('open')) {
+                    $('.sub-menu', this).slideUp().removeClass('open');
+                    $('span.ti-angle-up', this).addClass('ti-angle-down');
+                } else {
+                    $('.sub-menu', this).slideDown().addClass('open');
+                    $('span.ti-angle-down', this).removeClass('ti-angle-down');
+                }
+            });
+        };
     });
 
 
