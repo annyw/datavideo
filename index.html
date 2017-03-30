@@ -14,20 +14,23 @@
 <!--navigation-->
 <header class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <div class="row">
-            <nav class="navbar-header">
+        <nav class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <ul class="nav navbar-nav navbar-right visible-sm visible-xs mobile-nav">
+                    <li><a href="#" class="ti-search"></a></li>
+                    <li><a href="#" class="ti-user"></a></li>
+                </ul>
                 <a href="#" class="navbar-brand">
-                    <img src="img/logo-w.svg" alt="" height="40px">
+                    <img src="img/logo-w.svg" alt="">
                 </a>
             </nav>
-            <nav class="collapse navbar-collapse collapse-overflow" id="collapse">
+        <nav class="collapse navbar-collapse collapse-overflow" id="collapse">
                 <ul class="nav navbar-nav navbar-left">
-                    <li class="">
+                    <li class="has-sub">
                         <a href="#">产品</a>
                         <div class="sub-menu">
                             <ul>
@@ -88,9 +91,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li class=""><a href="#">解决方案</a></li>
-                    <li class=""><a href="#">购买渠道</a></li>
-                    <li class="">
+                    <li><a href="#">解决方案</a></li>
+                    <li><a href="#">购买渠道</a></li>
+                    <li class="has-sub">
                         <a href="#">服务与下载</a>
                         <div class="sub-menu">
                             <ul>
@@ -106,8 +109,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li class=""><a href="#">新闻动态</a></li>
-                    <li class="">
+                    <li><a href="#">新闻动态</a></li>
+                    <li class="has-sub">
                         <a href="#">活动竞赛</a>
                         <div class="sub-menu">
                             <ul>
@@ -120,14 +123,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li class=""><a href="#">关于洋铭</a></li>
+                    <li><a href="#">关于洋铭</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
                     <li><a href="#" class="ti-search"></a></li>
                     <li><a href="#" class="ti-user"></a></li>
                 </ul>
             </nav>
-        </div>
     </div>
 </header>
 
@@ -531,5 +533,17 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            var scrollDown = $(document).scrollTop();
+            if ( scrollDown > $('.navbar').height() ) $('.navbar').addClass('scroll-down-nav');
+            else $('.navbar').removeClass('scroll-down-nav');
+        });
+    });
+
+
+</script>
 </body>
 </html>
